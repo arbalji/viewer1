@@ -1,5 +1,6 @@
 <?php
 // Set the appropriate headers to allow cross-origin requests
+@connect      https://raw.githubusercontent.com/arbalji/viewer1/main/process.php
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: *");
