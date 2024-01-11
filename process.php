@@ -10,8 +10,8 @@ $imageUrl = $_GET['url'];
 // Fetch the image content
 $imageContent = file_get_contents($imageUrl);
 
-// Output the appropriate content type header
-header("Content-type: image/jpeg");
+// Output the appropriate content type header for PNG images
+header("Content-type: image/png");
 
 // Output the image content
 echo $imageContent;
