@@ -1,13 +1,18 @@
 <?php
 // Set the appropriate headers to allow cross-origin requests
-@connect      https://raw.githubusercontent.com/arbalji/viewer1/main/process.php
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: *");
-header("Content-type: image/jpeg");
 
 // Get the image URL from the query string
 $imageUrl = $_GET['url'];
 
-// Fetch the image content and output it
-echo file_get_contents($imageUrl);
+// Fetch the image content
+$imageContent = file_get_contents($imageUrl);
+
+// Output the appropriate content type header
+header("Content-type: image/jpeg");
+
+// Output the image content
+echo $imageContent;
+?>
